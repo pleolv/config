@@ -15,7 +15,7 @@ services:
     image: gcr.io/google-containers/cadvisor:latest
     container_name: cadvisor
     ports:
-    - 8888:8888
+    - 8080:8080
     volumes:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
