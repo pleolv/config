@@ -2,6 +2,7 @@ version: '3.2'
 services:
   prometheus:
     image: prom/prometheus:latest
+    restart: always
     container_name: prometheus
     ports:
     - 9090:9090
@@ -13,6 +14,7 @@ services:
     - cadvisor
   cadvisor:
     image: gcr.io/google-containers/cadvisor:latest
+    restart: always
     container_name: cadvisor
     privileged: true
     ports:
@@ -26,6 +28,7 @@ services:
     - redis
   redis:
     image: redis:latest
+    restart: always
     container_name: redis
     ports:
     - 6379:6379
