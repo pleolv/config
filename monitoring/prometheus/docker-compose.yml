@@ -14,16 +14,17 @@ services:
     - cadvisor
   cadvisor:
     image: gcr.io/google-containers/cadvisor:latest
-    restart: always
     container_name: cadvisor
     privileged: true
     ports:
     - 8080:8080
     volumes:
     - /:/rootfs:ro
+    - /dev/disk/:/dev/disk:ro
     - /var/run:/var/run:rw
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
+    - /sys/fs/cgroup:/cgroup:rw
     depends_on:
     - redis
   redis:
