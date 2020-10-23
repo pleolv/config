@@ -24,7 +24,7 @@ mkdir $DIR
 mv $PACKAGE $DIR
 cd $DIR
 
-tar zxf $PACKAGE
+unzip $PACKAGE
 #chmod u+x *.sh
 
 EOF
