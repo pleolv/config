@@ -29,7 +29,7 @@ if [[ ! -e $DIR ]]; then
     cd $DIR
     unzip $PACKAGE
 elif [[ ! -d $DIR ]]; then
-    echo "$DIR already exists but is not a directory" 1>&2
+    echo "$DIR already exists but is not a directory"
 fi
 
 EOF
