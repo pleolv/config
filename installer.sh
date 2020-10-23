@@ -10,3 +10,19 @@ ssh ${SSH_USER}@${HOST} "cd ~/install_wlpfo; curl -X GET -u 'admin:admin123' ${N
 
 #ssh ${SSH_USER}@${HOST} mv ${Nexus} /home/${SSH_USER}/install_wlpfo/
 
+ssh ${SSH_USER}@${HOST} << 'EOF'
+
+if [ -f ~/.install.source ]; then
+  source ~/.install.source
+fi
+
+cd ~/install_wlpfo
+PACKAGE=$(ls *.zip)
+DIR=${PACKAGE/.zip/}
+
+mkdir $DIR
+mv $PACKAGE $DIR
+cd $DIR
+
+tar zxf $PACKAGE
+chmod u+x *.sh
