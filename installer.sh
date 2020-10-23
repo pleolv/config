@@ -30,7 +30,8 @@ if [[ ! -e $DIR ]]; then
     cd $DIR
     unzip $PACKAGE
 elif [[ ! -d $DIR ]]; then
-    echo "$DIR already exists"
+    echo "Directory already exists"
+    echo $PACKAGE
     rm $PACKAGE
 fi
 
