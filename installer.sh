@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 ssh ${SSH_USER}@${HOST} "mkdir -p ~/install_wlpfo"
 
 echo "copy from nexus"
