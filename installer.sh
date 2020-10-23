@@ -24,12 +24,12 @@ PACKAGE=$(ls *.zip)
 DIR=${PACKAGE/.zip/}
 
 if [[ ! -e $DIR ]]; then
-    #DIR=${PACKAGE/.zip/}
     mkdir $DIR
     mv $PACKAGE $DIR
     cd $DIR
     unzip $PACKAGE
-elif [[ ! -d $DIR ]]; then
+fi
+if [[ ! -d $DIR ]]; then
     echo "Directory already exists"
     echo $PACKAGE
     rm $PACKAGE
