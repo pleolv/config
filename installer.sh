@@ -28,11 +28,9 @@ if [[ ! -e $DIR ]]; then
     mv $PACKAGE $DIR
     cd $DIR
     unzip $PACKAGE
-fi
-if [[ ! -d $DIR ]]; then
-    echo "Directory already exists"
-    echo $PACKAGE
-    rm $PACKAGE
+elif [[ ! -d $DIR ]]; then
+echo "Directory already exists"
+rm $PACKAGE
 fi
 
 EOF
