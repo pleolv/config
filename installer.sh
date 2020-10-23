@@ -29,3 +29,12 @@ cd $DIR
 unzip $PACKAGE
 
 EOF
+
+
+d=`date +%Y%m%d`
+
+#sed "s/TNS_ADMIN=\${HOME}/TNS_ADMIN=\/home\/wlpfo/g" *.properties
+
+
+
+
