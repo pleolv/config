@@ -23,10 +23,11 @@ if [ -f ~/.install.source ]; then
 fi
 
 cd ~/install_wlpfo
+
 PACKAGE=$(ls *.zip)
 DIR=${PACKAGE/.zip/}
 
-mkdir $DIR
+mkdir -p $DIR
 mv $PACKAGE $DIR
 cd $DIR
 
