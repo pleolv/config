@@ -31,6 +31,7 @@ if [[ ! -e $DIR ]]; then
     unzip $PACKAGE
 elif [[ ! -d $DIR ]]; then
     echo "$DIR already exists"
+    rm *.zip
 fi
 
 EOF
