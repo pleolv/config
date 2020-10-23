@@ -8,5 +8,5 @@ echo "copy from nexus"
 
 ssh ${SSH_USER}@${HOST} curl -X GET -u 'admin:admin123' ${Nexus} -O
 
-ssh ${SSH_USER}@${HOST} mv ${Nexus} /home/${SSH_USER}/install_wlpfo/
+#ssh ${SSH_USER}@${HOST} mv ${Nexus} /home/${SSH_USER}/install_wlpfo/
 
