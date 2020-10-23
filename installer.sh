@@ -2,10 +2,6 @@
 
 set -x
 
-
-
-
-
 ssh ${SSH_USER}@${HOST} "mkdir -p ~/install_wlpfo"
 
 echo "copy from nexus"
@@ -27,7 +23,7 @@ cd ~/install_wlpfo
 PACKAGE=$(ls *.zip)
 DIR=${PACKAGE/.zip/}
 
-if [[ ! -e $dir ]]; then
+if [[ ! -e $DIR ]]; then
     mkdir $DIR
     mv $PACKAGE $DIR
     cd $DIR
