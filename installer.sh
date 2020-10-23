@@ -23,19 +23,19 @@ cd ~/install_wlpfo
 PACKAGE=$(ls *.zip)
 DIR=${PACKAGE/.zip/}
 
-if [[ ! -e $DIR ]]; then
+if [[ ! -d $DIR ]]; then
+    echo "$DIR already exists but is not a directory"
+elif [[ ! -e $DIR ]]; then
     mkdir $DIR
     mv $PACKAGE $DIR
     cd $DIR
     unzip $PACKAGE
-elif [[ ! -d $DIR ]]; then
-    echo "$DIR already exists but is not a directory"
 fi
 
 EOF
 
 
-d=`date +%Y%m%d`
+#d=`date +%Y%m%d`
 
 #sed "s/TNS_ADMIN=\${HOME}/TNS_ADMIN=\/home\/wlpfo/g" *.properties
 
