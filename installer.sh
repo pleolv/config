@@ -27,11 +27,14 @@ cd ~/install_wlpfo
 PACKAGE=$(ls *.zip)
 DIR=${PACKAGE/.zip/}
 
-mkdir -p $DIR
-mv $PACKAGE $DIR
-cd $DIR
-
-unzip $PACKAGE
+if [[ ! -e $dir ]]; then
+    mkdir $DIR
+    mv $PACKAGE $DIR
+    cd $DIR
+    unzip $PACKAGE
+elif [[ ! -d $DIR ]]; then
+    echo "$DIR already exists but is not a directory" 1>&2
+fi
 
 EOF
 
