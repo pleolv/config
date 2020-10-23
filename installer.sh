@@ -24,7 +24,7 @@ PACKAGE=$(ls *.zip)
 #DIR=${PACKAGE/.zip/}
 
 if [[ ! -d $DIR ]]; then
-    echo "$DIR already exists but is not a directory"
+    echo "$DIR already exists"
 elif [[ ! -e $DIR ]]; then
     DIR=${PACKAGE/.zip/}
     mkdir $DIR
