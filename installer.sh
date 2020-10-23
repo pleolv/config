@@ -27,6 +27,5 @@ mv $PACKAGE $DIR
 cd $DIR
 
 unzip $PACKAGE
-#chmod u+x *.sh
 
 EOF
