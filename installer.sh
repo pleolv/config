@@ -25,4 +25,6 @@ mv $PACKAGE $DIR
 cd $DIR
 
 tar zxf $PACKAGE
-chmod u+x *.sh
+#chmod u+x *.sh
+
+EOF
