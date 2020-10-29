@@ -2,7 +2,7 @@
 
 set -x
 
-sshpass -p ${PASSWORD} ssh ${USER}@${HOST} << EOF
+sshpass -p ${PASSWORD} ssh -o "StrictHostKeyChecking no" ${USER}@${HOST} << EOF
 
 
 ls -la
