@@ -2,13 +2,14 @@ version: '3.7'
 services:
   jenkins:
     image: jenkins/jenkins
+    restart: always
     privileged: true
     user: root
     ports:
-      - 8080:8080
+      - 8088:8080
       - 50000:50000
     expose:
-      - 8080
+      - 8088
     container_name: jenkins
     volumes:
       - ~/jenkins:/var/jenkins_home
